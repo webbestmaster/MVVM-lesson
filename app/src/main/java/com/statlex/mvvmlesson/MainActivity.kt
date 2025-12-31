@@ -47,6 +47,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview(showBackground = true)
 @Composable
 fun MainView() {
     Column(
@@ -55,7 +56,7 @@ fun MainView() {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         var count by remember { mutableStateOf(0) }
-        var mv: ContactsViewModel = viewModel()
+        val mv: ContactsViewModel = viewModel()
 
         Text(
             text = "Counter is " + count.toString(),

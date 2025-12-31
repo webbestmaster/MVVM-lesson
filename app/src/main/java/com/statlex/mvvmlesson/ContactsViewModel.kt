@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 
 class ContactsViewModel : ViewModel() {
     var bgColor by mutableStateOf(Color.Green)
+        private set
 
     fun changeBgColor() {
         bgColor = Color.Red
